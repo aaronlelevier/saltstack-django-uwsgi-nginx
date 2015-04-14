@@ -1,1 +1,3 @@
 *.py[oc]
+settings.sls
+cloud.providers
