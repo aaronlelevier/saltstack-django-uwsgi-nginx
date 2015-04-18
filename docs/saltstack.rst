@@ -41,6 +41,26 @@ Minion
 salt-call <commands...>
 
 
+Grains
+------ 
+# sync minion grains on start
+http://docs.saltstack.com/en/latest/topics/reactor/index.html#minion-start-reactor
+
+# reload grains
+salt '*' saltutil.sync_grains
+
+or
+
+salt '*' state.highstate
+
+note
+    if keys or _grains dir isn't correctly created, won't raise erros, but key/values will be missing from:
+        `salt '*' grains.items`
+
+# ping all servers that have a "grain role of appserver"
+salt -G 'roles:appserver' test.ping
+
+
 Pillar
 ------
 # walkthrough:
@@ -56,8 +76,14 @@ salt '*' saltutil.refresh_pillar
 salt '*' pillar.items
 
 
-    NEXT
-    ----
-    # storing static data in the Pillar
-    http://docs.saltstack.com/en/latest/topics/pillar/index.html
+Salt Cloud
+----------
+# create VMs based on Profiders/Profiles/Map File
+salt-cloud -P -m /etc/salt/cloud.maps.d/map-file.map
 
+    Notes
+        -P = create in parallel
+        -m = call map file
+
+# destroy VMs using Map File
+salt-cloud -d -m /etc/salt/cloud.maps.d/map-file.map
