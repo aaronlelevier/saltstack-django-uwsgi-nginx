@@ -4,6 +4,9 @@ ps --sort -rss -eo rss,pid,command | head
 # free memory
 free -m
 
+# copy all contents from one Dir to a second
+cp dir1/* dir2
+
 
 ssh
 ---
