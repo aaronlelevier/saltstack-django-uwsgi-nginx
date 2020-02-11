@@ -1,6 +1,6 @@
 Cheetah==2.4.4
 CherryPy==3.2.2
-Django==1.7.7
+Django==1.11.28
 GitPython==0.3.2.RC1
 Jinja2==2.7.3
 Landscape-Client==14.12
