@@ -51,7 +51,7 @@ oauth==1.0.1
 prettytable==0.7.2
 psycopg2==2.6
 py==1.4.26
-pyOpenSSL==0.13
+pyOpenSSL==17.5.0
 pycrypto==2.6.1
 pycurl==7.19.3
 pyserial==2.6
