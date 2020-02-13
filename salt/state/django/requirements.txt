@@ -63,7 +63,7 @@ pytz==2015.2
 pyzmq==14.5.0
 redis==2.10.3
 repoze.lru==0.6
-requests==2.4.0
+requests==2.20.0
 salt==2014.7.0
 simplejson==3.3.1
 six==1.9.0
